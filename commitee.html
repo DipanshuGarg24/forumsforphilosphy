@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Committee | Tattvanveshi Forum of Philosophy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: { primary: '#1e3a8a', secondary: '#f59e0b', dark: '#111827', light: '#f9fafb' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        .sidebar-scroll::-webkit-scrollbar { width: 5px; }
+        .sidebar-scroll::-webkit-scrollbar-track { background: #1e3a8a; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 20px; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in-up.is-visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+
+<body class="bg-brand-light font-sans">
+
+    <aside id="sidebar" class="bg-brand-primary text-white h-screen fixed top-0 left-0 w-80 lg:w-80 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-50 overflow-y-auto sidebar-scroll">
+        <div class="p-6 text-center border-b border-blue-700">
+            <div class="h-40 w-40 rounded-full mx-auto mb-4 border-4 border-blue-500 flex items-center justify-center bg-white text-brand-primary text-5xl"><i class="fas fa-om"></i></div>
+            <h1 class="text-xl font-bold tracking-wider">TATTVANVESHI</h1>
+            <p class="text-xs text-blue-300 mt-1">Forum of Philosophy</p>
+        </div>
+        <nav class="py-6 px-4">
+            <ul class="space-y-2">
+                <li><a href="index.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-home w-6"></i><span>HOME</span></a></li>
+                <li class="accordion-item">
+                    <button class="accordion-toggle flex items-center justify-between w-full p-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        <div class="flex items-center"><i class="fas fa-info-circle w-6"></i><span>About Society</span></div>
+                        <i class="fas fa-chevron-down transform transition-transform rotate-180"></i>
+                    </button>
+                    <ul class="accordion-content pl-8 pt-2 space-y-2 text-sm">
+                        <li><a href="mission.html" class="block py-1 text-blue-200 hover:text-white">Our Mission</a></li>
+                        <li><a href="constitution.html" class="block py-1 text-blue-200 hover:text-white">The Constitution (MOA)</a></li>
+                        <li><a href="committee.html" class="block py-1 text-brand-secondary font-bold">Executive Committee</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-book w-6"></i><span>Publications</span></a></li>
+                <li><a href="membership.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-users w-6"></i><span>Membership</span></a></li>
+                <li><a href="contact.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-envelope w-6"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
+
+    <div class="lg:ml-80 transition-all duration-300 ease-in-out flex flex-col min-h-screen">
+        <header class="lg:hidden bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-30">
+            <h2 class="font-bold text-brand-primary">TATTVANVESHI</h2>
+            <button id="open-sidebar" class="text-brand-primary text-2xl"><i class="fas fa-bars"></i></button>
+        </header>
+
+        <main class="flex-grow">
+            <section class="bg-brand-primary text-white p-12 lg:p-20 text-center relative">
+                <h1 class="text-4xl lg:text-5xl font-extrabold mb-4">Executive Committee</h1>
+                <p class="text-lg text-blue-200">The governing body entrusted with the management of the Society.</p>
+            </section>
+
+            <div class="p-6 md:p-12 max-w-7xl mx-auto">
+                
+                <h2 class="text-2xl font-bold text-brand-primary mb-8 border-b pb-2">Office Bearers</h2>
+                <div class="grid md:grid-cols-3 gap-8 mb-12 fade-in-up">
+                    
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-brand-secondary">
+                        <div class="p-6 text-center">
+                            <div class="h-24 w-24 rounded-full bg-blue-100 mx-auto flex items-center justify-center text-brand-primary text-3xl mb-4"><i class="fas fa-user-tie"></i></div>
+                            <h3 class="text-xl font-bold text-brand-dark">Ranjan Kumar Panda</h3>
+                            <p class="text-brand-primary font-semibold mb-2">President</p>
+                            <p class="text-sm text-gray-500">Faculty/Professor, Dept. of HSS, IIT Bombay, Powai, Mumbai</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-brand-secondary">
+                        <div class="p-6 text-center">
+                            <div class="h-24 w-24 rounded-full bg-blue-100 mx-auto flex items-center justify-center text-brand-primary text-3xl mb-4"><i class="fas fa-user-edit"></i></div>
+                            <h3 class="text-xl font-bold text-brand-dark">Abhishek Yadav</h3>
+                            <p class="text-brand-primary font-semibold mb-2">Secretary</p>
+                            <p class="text-sm text-gray-500">Research Scholar, Dept. of HSS, IIT Bombay, Powai, Mumbai</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-brand-secondary">
+                        <div class="p-6 text-center">
+                            <div class="h-24 w-24 rounded-full bg-blue-100 mx-auto flex items-center justify-center text-brand-primary text-3xl mb-4"><i class="fas fa-calculator"></i></div>
+                            <h3 class="text-xl font-bold text-brand-dark">Barada Laxmi Panda</h3>
+                            <p class="text-brand-primary font-semibold mb-2">Treasurer</p>
+                            <p class="text-sm text-gray-500">Faculty/Asst. Professor, Dept. of Philosophy, Presidency University, Kolkata</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="text-2xl font-bold text-brand-primary mb-8 border-b pb-2">Executive Members</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in-up">
+                    
+                    <div class="bg-white p-6 rounded-lg shadow border border-gray-100 hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-lg text-brand-dark mb-1">Vyas Nitin Jayantilal</h4>
+                        <p class="text-xs text-gray-500 mb-2">Vadodara, Gujarat</p>
+                        <p class="text-sm text-gray-700">Faculty/Professor (Retd.), Dept. of Philosophy, M.S. University</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow border border-gray-100 hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-lg text-brand-dark mb-1">Arabinda Sahoo</h4>
+                        <p class="text-xs text-gray-500 mb-2">Cuttack, Orissa</p>
+                        <p class="text-sm text-gray-700">Faculty/Asst. Professor, National University of Study and Research in Law, Ranchi</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow border border-gray-100 hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-lg text-brand-dark mb-1">Kevezai Tureng</h4>
+                        <p class="text-xs text-gray-500 mb-2">Mokokchung, Nagaland</p>
+                        <p class="text-sm text-gray-700">Faculty/Asst. Professor, Dept. of Philosophy, Fazl Ali College</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow border border-gray-100 hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-lg text-brand-dark mb-1">Manik Konch</h4>
+                        <p class="text-xs text-gray-500 mb-2">Dhemaji, Assam</p>
+                        <p class="text-sm text-gray-700">Faculty/Asst. Professor, Dept. of Philosophy, Digboi Mahila Mahavidyalaya</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="bg-brand-dark text-gray-300 py-6 text-center text-sm">
+            &copy; 2025 Tattvanveshi Forum of Philosophy. All Rights Reserved.
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const openBtn = document.getElementById('open-sidebar');
+            const toggleSidebar = (show) => {
+                sidebar.classList.toggle('-translate-x-full', !show);
+                overlay.classList.toggle('hidden', !show);
+            }
+            openBtn.addEventListener('click', () => toggleSidebar(true));
+            overlay.addEventListener('click', () => toggleSidebar(false));
+            document.querySelectorAll('.accordion-toggle').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.nextElementSibling.classList.toggle('hidden');
+                    btn.querySelector('.fa-chevron-down').classList.toggle('rotate-180');
+                });
+            });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('is-visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

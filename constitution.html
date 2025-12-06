@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution | Tattvanveshi Forum of Philosophy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: { primary: '#1e3a8a', secondary: '#f59e0b', dark: '#111827', light: '#f9fafb' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        .sidebar-scroll::-webkit-scrollbar { width: 5px; }
+        .sidebar-scroll::-webkit-scrollbar-track { background: #1e3a8a; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 20px; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in-up.is-visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+
+<body class="bg-brand-light font-sans">
+
+    <aside id="sidebar" class="bg-brand-primary text-white h-screen fixed top-0 left-0 w-80 lg:w-80 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-50 overflow-y-auto sidebar-scroll">
+        <div class="p-6 text-center border-b border-blue-700">
+            <div class="h-40 w-40 rounded-full mx-auto mb-4 border-4 border-blue-500 flex items-center justify-center bg-white text-brand-primary text-5xl"><i class="fas fa-om"></i></div>
+            <h1 class="text-xl font-bold tracking-wider">TATTVANVESHI</h1>
+            <p class="text-xs text-blue-300 mt-1">Forum of Philosophy</p>
+        </div>
+        <nav class="py-6 px-4">
+            <ul class="space-y-2">
+                <li><a href="index.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-home w-6"></i><span>HOME</span></a></li>
+                <li class="accordion-item">
+                    <button class="accordion-toggle flex items-center justify-between w-full p-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        <div class="flex items-center"><i class="fas fa-info-circle w-6"></i><span>About Society</span></div>
+                        <i class="fas fa-chevron-down transform transition-transform rotate-180"></i>
+                    </button>
+                    <ul class="accordion-content pl-8 pt-2 space-y-2 text-sm">
+                        <li><a href="mission.html" class="block py-1 text-blue-200 hover:text-white">Our Mission</a></li>
+                        <li><a href="constitution.html" class="block py-1 text-brand-secondary font-bold">The Constitution (MOA)</a></li>
+                        <li><a href="committee.html" class="block py-1 text-blue-200 hover:text-white">Executive Committee</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-book w-6"></i><span>Publications</span></a></li>
+                <li><a href="membership.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-users w-6"></i><span>Membership</span></a></li>
+                <li><a href="contact.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i class="fas fa-envelope w-6"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
+
+    <div class="lg:ml-80 transition-all duration-300 ease-in-out flex flex-col min-h-screen">
+        <header class="lg:hidden bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-30">
+            <h2 class="font-bold text-brand-primary">TATTVANVESHI</h2>
+            <button id="open-sidebar" class="text-brand-primary text-2xl"><i class="fas fa-bars"></i></button>
+        </header>
+
+        <main class="flex-grow">
+            <section class="bg-brand-primary text-white p-12 lg:p-20 text-center relative">
+                <h1 class="text-4xl lg:text-5xl font-extrabold mb-4">Memorandum of Association</h1>
+                <p class="text-lg text-blue-200">Registration under The Societies Registration Act, 1860</p>
+            </section>
+
+            <div class="p-6 md:p-16 max-w-5xl mx-auto space-y-10">
+                
+                <section class="bg-white p-8 rounded-xl shadow-lg border-l-8 border-brand-secondary fade-in-up">
+                    <h2 class="text-2xl font-bold text-brand-primary mb-6">Society Details</h2>
+                    <div class="space-y-4">
+                        <div class="flex flex-col md:flex-row border-b pb-4">
+                            <span class="w-48 font-bold text-gray-700">Name of Society</span>
+                            <span class="text-gray-600">TATTVANVESHI FORUM OF PHILOSOPHY</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row border-b pb-4">
+                            <span class="w-48 font-bold text-gray-700">Registered Office</span>
+                            <span class="text-gray-600">M401, Casa Adriana, Downtown, Palava City Phase 2, Thane, Maharashtra-421204</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row">
+                            <span class="w-48 font-bold text-gray-700">Area of Operation</span>
+                            <span class="text-gray-600">All Over India</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="fade-in-up">
+                    <h2 class="text-2xl font-bold text-brand-primary mb-6">Rules & Regulations</h2>
+                    <div class="space-y-6">
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Use of Income</h3>
+                            <p class="text-gray-600 text-sm">The profits, if any, or other income and property of the Society shall be applied solely for the promotion of its objects as set forth in the Memorandum.</p>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Non-Profit Status</h3>
+                            <p class="text-gray-600 text-sm">No portion of income or property shall be paid or transferred, directly or indirectly, by way of dividend, bonus, or profit to any members of the Society.</p>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Dissolution Clause</h3>
+                            <p class="text-gray-600 text-sm">If the Society is dissolved, all income and movable/immovable properties shall not be distributed among members but must be transferred to another society working in the same area with similar objectives.</p>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="bg-brand-dark text-gray-300 py-6 text-center text-sm">
+            &copy; 2025 Tattvanveshi Forum of Philosophy. All Rights Reserved.
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const openBtn = document.getElementById('open-sidebar');
+            
+            const toggleSidebar = (show) => {
+                sidebar.classList.toggle('-translate-x-full', !show);
+                overlay.classList.toggle('hidden', !show);
+            }
+            
+            openBtn.addEventListener('click', () => toggleSidebar(true));
+            overlay.addEventListener('click', () => toggleSidebar(false));
+
+            document.querySelectorAll('.accordion-toggle').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.nextElementSibling.classList.toggle('hidden');
+                    btn.querySelector('.fa-chevron-down').classList.toggle('rotate-180');
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('is-visible'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
