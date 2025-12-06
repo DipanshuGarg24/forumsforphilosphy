@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tattvanveshi Forum of Philosophy | Home</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        // Custom Tailwind CSS Configuration to match the provided design
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#1e3a8a', // Deep Blue
+                            secondary: '#f59e0b', // Amber/Gold
+                            dark: '#111827', // Dark Gray
+                            light: '#f9fafb', // Light Gray
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for sidebar */
+        .sidebar-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .sidebar-scroll::-webkit-scrollbar-track {
+            background: #1e3a8a;
+        }
+
+        .sidebar-scroll::-webkit-scrollbar-thumb {
+            background: #f59e0b;
+            border-radius: 20px;
+        }
+
+        /* Animation classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-card {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.is-visible .stagger-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-light font-sans">
+
+    <aside id="sidebar"
+        class="bg-brand-primary text-white h-screen fixed top-0 left-0 w-80 lg:w-80 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-50 overflow-y-auto sidebar-scroll">
+        
+        <div class="p-6 text-center border-b border-blue-700">
+            <!-- <div class="h-40 w-40 rounded-full mx-auto mb-4 border-4 border-blue-500 flex items-center justify-center bg-white text-brand-primary text-5xl">
+                <i class="fas fa-om"></i> -->
+                <!-- <img src="logo.jpg" alt="School Logo" >
+            </div>  -->
+            <img src="logo.jpg" alt="School Logo" class="h-40 w-40 rounded-full mx-auto mb-4 border-4 border-blue-500">
+            <h1 class="text-xl font-bold tracking-wider">Forum of Philosophy </h1>
+            <p class="text-xs text-blue-300 mt-1">TATTVANVESHI Philosophical Society</p>
+            <!-- <p class="text-[10px] text-blue-400">Reg. Under Societies Registration Act 1860</p> -->
+        </div>
+
+        <nav class="py-6 px-4">
+            <ul class="space-y-2">
+                <li><a href="index.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors bg-blue-800"><i
+                            class="fas fa-home w-6"></i><span>HOME</span></a></li>
+
+                <li class="accordion-item">
+                    <button
+                        class="accordion-toggle flex items-center justify-between w-full p-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        <div class="flex items-center"><i class="fas fa-info-circle w-6"></i><span>About Society</span></div>
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <ul class="accordion-content hidden pl-8 pt-2 space-y-2 text-sm">
+                        <li><a href="#" class="block py-1 text-blue-200 hover:text-white">Our Mission</a></li>
+                        <li><a href="#" class="block py-1 text-blue-200 hover:text-white">The Constitution (MOA)</a></li>
+                        <li><a href="#" class="block py-1 text-blue-200 hover:text-white">Executive Committee</a></li>
+                    </ul>
+                </li>
+
+                <li class="accordion-item">
+                    <button
+                        class="accordion-toggle flex items-center justify-between w-full p-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        <div class="flex items-center"><i class="fas fa-chalkboard-teacher w-6"></i><span>Activities</span></div>
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <ul class="accordion-content hidden pl-8 pt-2 space-y-2 text-sm">
+                        <li><a href="#" class="block py-1 text-blue-200 hover:text-white">Lecture Series</a></li>
+                        <li><a href="#" class="block py-1 text-blue-200 hover:text-white">Weekly Meetings</a></li>
+                        <li><a href="#" class="block py-1 text-blue-200 hover:text-white">Conferences</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i
+                            class="fas fa-book w-6"></i><span>Publications</span></a></li>
+
+                <li><a href="membership.html" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i
+                            class="fas fa-users w-6"></i><span>Membership</span></a></li>
+
+                <li><a href="#" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-colors"><i
+                            class="fas fa-envelope w-6"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="p-6 border-t border-blue-700 space-y-3">
+            <h3 class="text-sm font-semibold text-blue-300 uppercase">Get Involved</h3>
+            <a href="#" 
+                class="block text-center w-full bg-green-200 text-gray-800 font-bold py-2.5 px-4 rounded-lg hover:bg-white transition-all transform hover:scale-105">
+                Join the Forum</a>
+            <!-- <a href="#"
+                class="block text-center w-full bg-brand-secondary text-brand-dark font-bold py-2.5 px-4 rounded-lg hover:bg-amber-300 transition-all transform hover:scale-105">
+                Submit a Paper</a> -->
+        </div>
+    </aside>
+
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
+
+    <div class="lg:ml-80 transition-all duration-300 ease-in-out flex flex-col min-h-screen">
+        <header class="lg:hidden bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-30">
+            <h2 class="font-bold text-brand-primary">TATTVANVESHI</h2>
+            <button id="open-sidebar" class="text-brand-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <main class="flex-grow">
+            <section id="home" class="relative h-[60vh] lg:h-screen flex items-center justify-center text-center p-4">
+                <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image:url('https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=2574&auto=format&fit=crop');"></div>
+                <div class="absolute inset-0 bg-brand-primary/80"></div>
+                
+                <div class="relative z-10 text-white p-4">
+                    <div class="animated-text-container text-3xl md:text-5xl font-extrabold text-shadow-lg h-24">
+                        <span id="animated-text" class="animated-text"></span>
+                    </div>
+                    <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto opacity-90 font-light">
+                        "Exploring the Metaphysics of Consciousness through Samkhya-Yoga and Vedantic Perspectives."
+                    </p>
+                    <a href="#about" class="mt-8 inline-block font-bold bg-brand-secondary text-brand-dark py-3 px-8 rounded-full hover:bg-white transition-all transform hover:scale-105">
+                        Explore Our Vision
+                    </a>
+                </div>
+            </section>
+
+            <div class="bg-gray-100 py-16 md:py-24 px-6 md:px-12 space-y-20">
+                
+                <section id="about" class="max-w-6xl mx-auto grid md:grid-cols-5 gap-12 items-center fade-in-up">
+                    <div class="md:col-span-3">
+                        <h2 class="text-3xl font-bold text-brand-primary mb-4 border-l-4 border-brand-secondary pl-4">About Tattvanveshi</h2>
+                        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                            Established in July 2017, the <strong>Tattvanveshi Forum of Philosophy</strong> is a society dedicated to developing and promoting educational and training materials in the field of philosophy. We aim to bring together public and private sectors to open new opportunities for potential learners.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Our area of operation extends all over India, focusing on conducting seminars, web-seminars, conferences, and lectures to facilitate skill development and personality development techniques through Indian philosophical systems.
+                        </p>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-brand-primary">
+                            <h3 class="text-xl font-bold text-brand-primary mb-2"><i class="fas fa-history mr-2 text-brand-secondary"></i> Our Origins</h3>
+                            <p class="text-gray-600 italic">Started as a weekly discussion group in 2017, the Forum has evolved into a registered society organizing international conferences and anthologies on consciousness studies.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 text-center">
+                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop" class="rounded-xl shadow-2xl mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-500" alt="Philosophy Discussion">
+                    </div>
+                </section>
+
+                <section class="max-w-6xl mx-auto fade-in-up">
+                    <h2 class="text-3xl font-bold text-brand-primary mb-12 text-center">Our Objectives</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="stagger-card bg-white p-8 rounded-xl shadow-xl text-center transform hover:-translate-y-2 transition-all duration-300" style="transition-delay: 100ms;">
+                            <i class="fas fa-brain text-5xl text-brand-secondary mb-4"></i>
+                            <h4 class="font-bold text-xl text-brand-dark mb-2">Skill Development</h4>
+                            <p class="text-sm text-gray-600">Promoting personality development techniques and soft skills training.</p>
+                        </div>
+                        <div class="stagger-card bg-white p-8 rounded-xl shadow-xl text-center transform hover:-translate-y-2 transition-all duration-300" style="transition-delay: 200ms;">
+                            <i class="fas fa-laptop-house text-5xl text-brand-secondary mb-4"></i>
+                            <h4 class="font-bold text-xl text-brand-dark mb-2">E-Learning</h4>
+                            <p class="text-sm text-gray-600">Providing online classes, e-courses, and distance education opportunities.</p>
+                        </div>
+                        <div class="stagger-card bg-white p-8 rounded-xl shadow-xl text-center transform hover:-translate-y-2 transition-all duration-300" style="transition-delay: 300ms;">
+                            <i class="fas fa-comments text-5xl text-brand-secondary mb-4"></i>
+                            <h4 class="font-bold text-xl text-brand-dark mb-2">Counseling</h4>
+                            <p class="text-sm text-gray-600"> offering personal consultancy, telephonic consultation, and guidance.</p>
+                        </div>
+                        <div class="stagger-card bg-white p-8 rounded-xl shadow-xl text-center transform hover:-translate-y-2 transition-all duration-300" style="transition-delay: 400ms;">
+                            <i class="fas fa-book-reader text-5xl text-brand-secondary mb-4"></i>
+                            <h4 class="font-bold text-xl text-brand-dark mb-2">Publications</h4>
+                            <p class="text-sm text-gray-600">Publishing anthologies like "Samkhya-Yoga Philosophy of Consciousness".</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="max-w-5xl mx-auto fade-in-up">
+                    <h2 class="text-3xl font-bold text-brand-primary mb-8 text-center">Leadership</h2>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-brand-secondary">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="h-40 w-40 flex-shrink-0 rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-5xl">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-brand-primary">Prof. Ranjan Kumar Panda</h3>
+                                <p class="text-brand-secondary font-semibold">President & Editor</p>
+                                <p class="text-gray-500 text-sm mb-4">Professor, Dept. of HSS, IIT Bombay</p>
+                                <p class="text-gray-600 italic">"Consciousness is not merely a functional entity, but a metaphysical being. Our goal is to explore the depths of Samkhya-Yoga and Vedanta to understand human subjectivity and freedom."</p>
+                                <p class="text-sm text-gray-400 mt-2">Author of "Mind, Language and Intentionality" & Founder of the Forum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="bg-brand-dark text-gray-300">
+            <div class="container mx-auto py-12 px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="h-10 w-10 rounded-full border-2 border-brand-secondary bg-white flex items-center justify-center text-brand-primary">
+                                <i class="fas fa-om"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Tattvanveshi Forum</h3>
+                        </div>
+                        <p class="text-sm">A philosophical society dedicated to the inquiry into truth (Tattva) and the exploration of consciousness through ancient Indian wisdom.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Explore</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="nav-link hover:text-brand-secondary transition-colors">About the Society</a></li>
+                            <li><a href="#" class="nav-link hover:text-brand-secondary transition-colors">Our Publications</a></li>
+                            <li><a href="#" class="nav-link hover:text-brand-secondary transition-colors">Membership</a></li>
+                            <li><a href="#" class="nav-link hover:text-brand-secondary transition-colors">Upcoming Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Registered Office</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt w-5 mt-1 text-brand-secondary"></i>
+                                <span>M401, Casa Adriana, Downtown, Palava City Phase 2, Thane, Maharashtra-421204</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-university w-5 mt-1 text-brand-secondary"></i>
+                                <span>Dept. of HSS, IIT Bombay, Powai, Mumbai - 400076</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope w-5 mt-1 text-brand-secondary"></i>
+                                <a href="mailto:ranjan.panda@iitb.ac.in" class="hover:text-brand-secondary">ranjan.panda@iitb.ac.in</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Connect With Us</h3>
+                        <p class="text-sm mb-4">Join our weekly discussions and stay updated on the latest research in philosophy.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="h-10 w-10 bg-gray-700 text-white rounded-full flex items-center justify-center hover:bg-brand-secondary hover:text-brand-dark transition-all transform hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 bg-gray-700 text-white rounded-full flex items-center justify-center hover:bg-brand-secondary hover:text-brand-dark transition-all transform hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="h-10 w-10 bg-gray-700 text-white rounded-full flex items-center justify-center hover:bg-brand-secondary hover:text-brand-dark transition-all transform hover:scale-110">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-black/20 py-4 px-6">
+                <div class="container mx-auto text-center text-sm text-gray-400">
+                    &copy; 2025 Tattvanveshi Forum of Philosophy. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sidebar Toggle Logic
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const openSidebarButton = document.getElementById('open-sidebar');
+
+            const openSidebar = () => {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            };
+
+            const closeSidebar = () => {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            };
+
+            openSidebarButton.addEventListener('click', openSidebar);
+            overlay.addEventListener('click', closeSidebar);
+
+            // Accordion Logic
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            accordionToggles.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('.fa-chevron-down');
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Animated Text Logic
+            const animatedText = document.getElementById('animated-text');
+            const phrases = ["Search for Truth...", "Samkhya-Yoga Philosophy...", "Metaphysics of Consciousness..."];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+                if (isDeleting) {
+                    animatedText.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    animatedText.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                let typeSpeed = isDeleting ? 100 : 150;
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    typeSpeed = 1500; // Pause at end
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    typeSpeed = 300;
+                }
+                setTimeout(type, typeSpeed);
+            }
+            type();
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = { root: null, threshold: 0.1 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.fade-in-up').forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
